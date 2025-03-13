@@ -4,10 +4,10 @@ import type { Activity } from "../types";
 import { ActivityActions } from "../redecurs/activity-reducer";
 
 type FormProps = {
-    dispatch : Dispatch<ActivityActions>
-}
+  dispatch: Dispatch<ActivityActions>;
+};
 
-export default function Form({dispatch} : FormProps) {
+export default function Form({ dispatch }: FormProps) {
   const [activity, setActivity] = useState<Activity>({
     category: 1,
     name: "",
@@ -32,7 +32,9 @@ export default function Form({dispatch} : FormProps) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    dispatch({type: 'save-activity', payload: {newActivity : activity}})
+    dispatch({ type: "save-activity", payload: { newActivity: activity } });
+
+    setActivity({ category: 1, name: "", calories: 0 });
   };
   return (
     <form
