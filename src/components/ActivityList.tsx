@@ -42,7 +42,7 @@ export default function ActivityList({ activities, dispatch }: ActivityListProps
             </p>
           </div>
           <div className="flex gap-5 items-center">
-            <button onClick={() => dispatch({type: 'set-activeId', payload: activity.id})}>
+            <button onClick={() => dispatch({type: 'set-activeId', payload: {id: activity.id}})}>
               <PencilSquareIcon className="h-8 w-8 text-gray-800" />
             </button>
           </div>
