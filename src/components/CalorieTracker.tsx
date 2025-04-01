@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import CalorieDisplay from "./CalorieDisplay";
 import { useActivity } from "../hooks/useActivity";
 
